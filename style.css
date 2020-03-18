@@ -1,5 +1,6 @@
 #menu
 {
+    overflow: hidden;
 	position: fixed;
 	width: 100%;
 	height: 35px;
