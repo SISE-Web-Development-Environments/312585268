@@ -2,179 +2,62 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>	
 <body>
-	<div id="menu">
-		<a href="#about">About Me</a>
-		<a href="#photos">My Photos</a>
-		<a href="#playlist">My Playlist</a>
-		<a href="#like">Like</a>
-		<a href="#qrcoder">QR code</a>
-		<a href="#spa">Q&A</a>
-		<a href="#contact">Contact Me</a>
-	</div>
-		  
+	
+	<header>
+		<nav>
+			<a href="#">
+				<img class="logo" src="logo2.png">
+			</a>
+			<div id="menu">
+				<ul>
+					<!-- <li><a href="#">Home</a></li> -->
+					<li><a href="#about">About Me</a></li>
+					<li><a href="#photos">My Photos</a></li>
+					<li><a href="#playlist">My Playlist</a></li>
+					<li><a href="#like">Like</a></li>
+					<li><a href="#qrcoder">QR code</a></li>
+					<li><a href="#spa">Q&A</a></li>
+					<li><a href="#contact">Contact Me</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>	
 	<section id="about" class="section">
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		about me
-		<br/>
-		<br/>
-		<br/>
+		<h1>About Me</h1>
+		<p>
+			My name is Gal Rosenthal,</br>
+			I was born in Meitar, Israel.</br>
+			As you can Guess My First hobby is Karate, I was doing Karate for almost 20 years and i have a black belt, 2nd Dan.</br>
+			Also, I really like to play basketball and playing video games :)</br>
+		</p>
 	</section>
-
+	
 	<section id="photos" class="section">
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		my photos
-		<br/>
-		<br/>
-		<br/>
+		<h1>My Photos</h1>
 	</section>
-
+	
 	<section id="playlist" class="section">
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		my playlist
-		<br/>
-		<br/>
-		<br/>
+		<h1>My Playlist</h1>
 	</section>
-
+	
 	<section id="like" class="section">
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		give me a like
-		<br/>
-		<br/>
-		<br/>
+		<h1>Why don't you give me a like :)</h1>
 	</section>
-
+	
 	<section id="qrcoder" class="section">
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		scan my code
-		<br/>
-		<br/>
-		<br/>
+		<h1>Here is a QRcode to my website</h1>
 	</section>
-
+	
 	<section id="spa" class="section">
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		ans
-		<br/>
-		<br/>
-		<br/>
+		<h1>Frequently asked questions</h1>
 	</section>
-
+	
 	<section id="contact" class="section">
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		contact me
-		<br/>
-		<br/>
-		<br/>
+		<h1>Send me an email</h1>
 	</section>
-
 
 	<script type="text/javascript">
 		$(function(){
@@ -189,5 +72,18 @@
 		    $('#menu').toggle($(this).scrollTop()>1000)
 		 });​
 	 </script>
+
+	 <script type="text/javascript">
+	 	$(window).on("scroll", function(){
+	 		if($(window).scrollTop()>270){
+	 			$('nav').addClass('black');
+	 		}
+
+	 		else {
+	 			$('nav').removeClass('black');
+	 		}
+	 	})
+	 </script>
+
 </body>
 </html>
