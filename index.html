@@ -23,14 +23,15 @@
 					<li><a href="#about">About Aang</a></li>
 					<li><a href="#photos">Photos</a></li>
 					<li><a href="#playlist">Playlist</a></li>
+					<li><a href="#like">Like</a></li>
 					<li><a href="#qrcode">QR code</a></li>
 					<li><a href="#spa">Q&A</a></li>
 					<li><a href="#contact">Contact Me</a></li>
-					<li><a href="#like">Like</a></li>
 				</ul>
 			</div>
 		</nav>
 	</header>	
+
 	<section id="about" class="section">
 		<h1>Who is Avatar Aang?</h1>
 		<p>
@@ -39,6 +40,8 @@
 		</p>
 	</section>
 	
+
+
 	<section id="photos" class="section">
 		<h1>Photos</h1>
 		<div class="content">
@@ -56,6 +59,9 @@
 		</div>
 	</section>
 	
+
+
+
 	<section id="playlist" class="section">
 		<h1>My Playlist</h1>
 		<div id="playlist-center">
@@ -63,7 +69,16 @@
 		</div>
 	</section>
 	
-	
+	<section id="like" class="section">
+		<h1>Why Dont You Give me a Like :)</h1>
+		<div class="fb-like" 
+			data-href="https://sise-web-development-environments.github.io/assignment1-galrosenthal/" 
+			data-layout="button_count" 
+			data-action="like" 
+			data-size="large" 
+			data-share="false">
+		</div>
+	</section>
 	
 	<section id="qrcode" class="section">
 		<h1>Here is a QRcode to my website</h1>
@@ -80,24 +95,15 @@
 			<form id="contact-form" method="post" action="">
 				<input type="text" name="name" class="form-control" placeholder="Your Name" required=""><br>
 				<input type="email" name="email" class="form-control" placeholder="Your Email" required=""><br>
-				<textarea name="message" class="form-control" placeholder="Enter Your Message" required="">
-				</textarea><br>
+				<textarea name="message" class="form-control" placeholder="Enter Your Message" required=""></textarea>
+				<br>
 				<input type="submit" class="form-control submit" value="SEND MESSAGE">				
 			</form>
 		</div>
 
-	<!-- </section> -->
-	<!-- <section id="like" class="section"> -->
-		<div class="fb-like" 
-			data-href="https://sise-web-development-environments.github.io/assignment1-galrosenthal/" 
-			data-layout="button_count" 
-			data-action="like" 
-			data-size="large" 
-			data-share="false">
-		</div>
 	</section>
+	
 
-	<a id="like"></a>
 
 	<div id="fb-root"></div>
 	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=164151243680923&autoLogAppEvents=1"></script>
@@ -118,7 +124,7 @@
 
 	 <script type="text/javascript">
 	 	$(window).on("scroll", function(){
-	 		if($(window).scrollTop()>270){
+	 		if($(window).scrollTop()>470){
 	 			$('nav').addClass('black');
 	 		}
 
@@ -127,6 +133,7 @@
 	 		}
 	 	})
 	 </script>
+
 
 </body>
 </html>
