@@ -4,7 +4,7 @@ My name is Gal Rosenthal, 312585268.
 
 I'm a Student for System Information and Software Engeneering in Ben-Gurion University.
 
-## About My Website
+## My Website
 My Website is about:
 **Avatar Aang - The Last Airbender**
 
