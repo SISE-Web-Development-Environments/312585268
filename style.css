@@ -109,6 +109,49 @@ section{
 	background: linear-gradient(#3b3d5a,#0096ae);
 	
 }
+
+.bg-modal{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	position: fixed;
+	top: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+}
+
+.modal-content{
+	width: 500px;
+	height: 300px;
+	background-color: white;
+	opacity: 1;
+	border-radius: 4px;
+	position: relative;
+	z-index: 2;
+}
+
+.close{
+	position: absolute;
+	top: 0;
+	right: 14px;
+	font-size: 42px;
+	font-weight: bold;
+	transform: rotate(45deg);
+	cursor: pointer;
+	z-index: 201;
+}
+
+#image-pop{
+	position: absolute;
+	margin: 0 0;
+	display: block;
+	z-index: 200;
+	opacity: 1;
+}
+
+
 #photos{
 	background: linear-gradient(#0096ae,#ae6500);
 	z-index: 0;
@@ -116,6 +159,7 @@ section{
 	margin: 0 auto;
 	height: 700px;
 	box-sizing: border-box;
+	justify-content: center;
 }
 
 #playlist{
@@ -300,6 +344,9 @@ form .submit:hover{
 	}
 }
 
+
+/* -----------------------  Playlist Section ------------------*/
+
 #playlist-center{
 	padding-left: 35%;
 	
@@ -308,4 +355,96 @@ form .submit:hover{
 #youtube-playlist{
 	width: 50%;
 	height: 35vh;
+}
+
+
+/* -----------------------  Q & A Section ------------------*/
+
+#qbtns{
+	list-style: none;
+	padding: 5px 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#qbtns li{
+	padding-top: 0;
+	margin: 0;
+	padding-left: 40px;
+}
+
+#qbtns li button{
+	font-size: 30px;
+	font-family: 'Levenim MT';
+	color: white;
+	border-radius: 10px;
+	border: 0;
+	background-image: linear-gradient(to right, rgba(0,200,250,0.7), rgba(0,0,255,.8));
+	cursor: pointer;
+}	
+
+
+
+.questions{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) scale(0);
+	transition: 350ms ease-in-out;
+	border-radius: 10px;
+	z-index: 300;
+	background-color: white;
+	border: 1px solid black;
+	width: 500px;
+	max-width: 80%;
+}
+
+#q1.active{
+	transform: translate(-50%,-50%) scale(1);
+}
+
+#q2.active{
+	transform: translate(-50%,-50%) scale(1);
+}
+
+
+.questions .q-Title{
+	top: 0;
+	padding-left: 35px;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.questions .q-body{
+	box-sizing: border-box;
+	padding-left: 25px;
+	font-size: 1rem;
+}
+
+.close2{
+	position: absolute;
+	top: 0;
+	right: 14px;
+	font-size: 42px;
+	font-weight: bold;
+	transform: rotate(45deg);
+	cursor: pointer;
+	z-index: 201;
+}
+
+#overlay{
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	pointer-events: none;
+	transition: 350ms ease-in-out;
+}
+#overlay.active{
+	pointer-events: all;
+	opacity: 1;
 }

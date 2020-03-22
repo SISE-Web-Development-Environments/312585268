@@ -43,21 +43,31 @@
 
 
 	<section id="photos" class="section">
+
 		<h1>Photos</h1>
-		<div class="content">
-			<div class="content-crsl">
-				<figure class="shadow"><img src="imgs/aang-drone.jpg"></figure>
-				<figure class="shadow"><img src="imgs/learning.jpg"></figure>
-				<figure class="shadow"><img src="imgs/aang-bending.jpg"></figure>
-				<figure class="shadow"><img src="imgs/aang-bending2.jpg"></figure>
-				<figure class="shadow"><img src="imgs/ba-sing-se.jpg"></figure>
-				<figure class="shadow"><img src="imgs/learning2.jpg"></figure>
-				<figure class="shadow"><img src="imgs/water-avatar-state.jpg"></figure>
-				<figure class="shadow"><img src="imgs/aang-state.jpg"></figure>
-				<figure class="shadow"><img src="imgs/all.jpg"></figure>
+		<div class="bg-modal">
+			<div class="modal-content">
+				<div class="close" onclick="closeImage()">+</div>
+				<figure id="image-pop"><img width="500px" height="300px" src="imgs/aang-drone.jpg"></figure>
 			</div>
 		</div>
+		<div class="content">
+			<div class="content-crsl">
+				<figure class="shadow" onclick="openImage('imgs/aang-drone.jpg')"><img src="imgs/aang-drone.jpg"></figure>
+				<figure class="shadow" onclick="openImage('imgs/learning.jpg')"><img src="imgs/learning.jpg"></figure>
+				<figure class="shadow" onclick="openImage('imgs/aang-bending.jpg')"><img src="imgs/aang-bending.jpg"></figure>
+				<figure class="shadow" onclick="openImage('imgs/aang-bending2.jpg')"><img src="imgs/aang-bending2.jpg"></figure>
+				<figure class="shadow" onclick="openImage('imgs/ba-sing-se.jpg')"><img src="imgs/ba-sing-se.jpg"></figure>
+				<figure class="shadow" onclick="openImage('imgs/learning2.jpg')"><img src="imgs/learning2.jpg"></figure>
+				<figure class="shadow" onclick="openImage('imgs/water-avatar-state.jpg')"><img src="imgs/water-avatar-state.jpg"></figure>
+				<figure class="shadow" onclick="openImage('imgs/aang-state.jpg')"><img src="imgs/aang-state.jpg"></figure>
+				<figure class="shadow" onclick="openImage('imgs/all.jpg')"><img src="imgs/all.jpg"></figure>
+			</div>
+		</div>
+
+
 	</section>
+	
 	
 
 
@@ -87,17 +97,83 @@
 	
 	<section id="spa" class="section">
 		<h1>Frequently asked questions</h1>
+
+		<div id="qbtns">
+
+			<li>
+				<button data-modal-target=".questions" onclick="openModal('#q1')">Question 1</button>
+			</li>
+			<li>
+				<button data-modal-target=".questions" onclick="openModal('#q2')">Question 2</button>
+			</li>
+		</div>
+		
+		<div class="questions" id="q1">
+			<div class="close2" onclick="closeModal('#q1')">+</div>
+			<div class="q-Title" >
+				<h3>
+					Question 1
+				</h3>
+			</div>
+			<div class="q-body" id="ans1">
+				<p>
+					The 3 key diffrences between Web 1.0, Web 2.0 and Web 3.0 are: <br>
+					<ul>
+						<li> 
+							User Interaction - which means in Web1.0 is not interactive with the user, it is only a bridge between the websites and the user for example look at <a href="https://telaviv.craigslist.org/" target="_blank">craiglist.com</a>.<br> while in Web2.0 and Web3.0 are fully interactive with the user. 
+						</li>
+						<br>
+						<li>
+							Search - In Web1.0 the user must use the full URL of the site which he wants to access to, while in Web2.0 and Web3.0 the user can use only the base URL.
+						</li>
+						<br>
+						<li>
+							Readbility - Web1.0 is Mostly Read-Only, and Web2.0 is Wildly Read-Write while Web3.0 is Portable and Personal.
+						</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+		<div class="questions" id="q2">
+			<div class="close2" onclick="closeModal('#q2')">+</div>
+			<div class="q-Title">
+				<h3>
+					Question 2
+				</h3>
+			</div>
+			<div class="q-body" id="ans1">
+				<p>
+					<h3> Searching for "medicine side effects"</h3>
+					<ul>
+						<li>
+							In Web1.0 the user will write a specific url of the site he <b>knows</b> is talking about the medicine side effects
+						</li>
+						<br>
+						<li>
+							In Web2.0 the user will search the query above in the search engine (such as google.com), which will return every link that have tags or words related to the query.
+						</li>
+						<br>
+						<li>
+							In Web3.0 the user will search the query above in the search engine, which will return every link or part of a page that contains words or tag from the query.
+						</li>
+					</ul>
+
+				</p>
+			</div>
+		</div>
+		<div id="overlay"></div>
+
 	</section>
 	
 	<section id="contact" class="section">
 		<h1>Share Your Thoughts</h1>
 		<div class="contact-form">
-			<form id="contact-form" method="post" action="">
+			<form id="contact-form1" method="post" action="mailto:rosengal@post.bgu.ac.il">
 				<input type="text" name="name" class="form-control" placeholder="Your Name" required=""><br>
 				<input type="email" name="email" class="form-control" placeholder="Your Email" required=""><br>
 				<textarea name="message" class="form-control" placeholder="Enter Your Message" required=""></textarea>
 				<br>
-				<input type="submit" class="form-control submit" value="SEND MESSAGE">				
+				<input type="submit" class="form-control submit" onclick="submitForm()" value="SEND MESSAGE">				
 			</form>
 		</div>
 
@@ -133,6 +209,49 @@
 	 		}
 	 	})
 	 </script>
+
+	 <script type="text/javascript">
+	 	function openImage(pic){
+	 		var wndw = document.querySelector('.bg-modal');
+	 		var pop = document.getElementById("image-pop");
+	 		var crsl = document.querySelector('.content-crsl');
+	 		var oimg = pop.firstElementChild;
+	 		oimg.src = pic;
+	 		wndw.style.display = 'flex';
+	 		crsl.style.animationPlayState = 'paused';
+
+
+	 	}
+
+	 	function closeImage(){
+	 		var close = document.querySelector('.bg-modal');
+	 		var crsl = document.querySelector('.content-crsl');
+	 		close.style.display = 'none';
+	 		crsl.style.animationPlayState = '';
+	 	}
+	 </script>
+
+	 <script type="text/javascript">
+
+	 	function openModal(q_to_opn)
+	 	{
+	 		var modal = document.querySelector(q_to_opn);
+	 		if(modal == null) return;
+	 		var overlay = document.querySelector('#overlay');
+	 		modal.classList.add('active');
+	 		overlay.classList.add('active');
+	 	}
+
+	 	function closeModal(q_to_close){
+	 		var qstns = document.querySelector(q_to_close);
+	 		var overlay = document.querySelector('#overlay');
+	 		qstns.classList.remove('active');
+	 		overlay.classList.remove('active');
+	 	}
+
+	 	
+	 </script>
+
 
 
 </body>
