@@ -1,5 +1,4 @@
 # assignment1-galrosenthal
-assignment1-galrosenthal created by GitHub Classroom
 
 My name is Gal Rosenthal, 312585268.
 
