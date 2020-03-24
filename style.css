@@ -210,7 +210,6 @@ section h1{
 
 form{
 	text-align: center;
-
 	margin-top: 20px;
 	transition: all 4s ease-in-out;
 }
@@ -223,13 +222,19 @@ form{
 	outline: none;
 	border-bottom: 1px solid gray;
 	color: #fff;
-	font-size: 18px;
+	font-size: 16px;
 	margin-bottom: 16px;
 }
 
 input{
 	height: 45px;
+	text-align: left;
 
+}
+
+input::placeholder{
+	color: gray;
+	font-family: sans-serif;
 }
 
 form .submit{
@@ -241,6 +246,7 @@ form .submit{
 	letter-spacing: 2px;
 	height: 50px;
 	margin-top: 20px;
+	text-align: center;
 
 }
 

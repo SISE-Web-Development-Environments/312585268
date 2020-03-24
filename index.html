@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="emojionearea.min.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="js/emojionearea.min.js"></script>
 	<title>Avatar Aang</title>
 </head>	
 <body>
@@ -171,9 +173,9 @@
 			<form id="contact-form1" method="post" action="mailto:rosengal@post.bgu.ac.il">
 				<input type="text" name="name" class="form-control" placeholder="Your Name" required=""><br>
 				<input type="email" name="email" class="form-control" placeholder="Your Email" required=""><br>
-				<textarea name="message" class="form-control" placeholder="Enter Your Message" required=""></textarea>
+				<textarea name="message" id="contact-msg" class="form-control" placeholder="Enter Your Message" required=""></textarea>
 				<br>
-				<input type="submit" class="form-control submit" onclick="submitForm()" value="SEND MESSAGE">				
+				<input type="submit" class="form-control submit" value="SEND MESSAGE">				
 			</form>
 		</div>
 
@@ -252,6 +254,13 @@
 	 	
 	 </script>
 
+	 <script type="text/javascript">
+	 	$(document).ready(function(){
+	 		$("#contact-msg").emojioneArea({
+	 			pickerPosition: "bottom"
+	 		});
+	 	})
+	 </script>
 
 
 </body>
