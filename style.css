@@ -86,7 +86,7 @@ nav ul li a:hover::after{
 }
 
 nav.black{
-	background: linear-gradient(5deg, #3b3d5a, #501c69);
+	background: transparent;
 	position: fixed;
 	width: 100%;
 	line-height: 70px;
@@ -107,7 +107,13 @@ section{
 
 #about{
 	background: linear-gradient(#3b3d5a,#0096ae);
-	
+	height: 550px;
+
+}
+
+#prgp{
+	text-align: left;
+	padding-left: 10%;
 }
 
 .bg-modal{
@@ -178,9 +184,12 @@ section{
 
 #spa{
 	background: linear-gradient(#d43d8b,#6e2776);
+	height: 500px;
+	padding-bottom: 0;
 	
 }
 #contact{
+	padding-top: 0;
 	background: linear-gradient(#6e2776,#6e2776);
 	
 }
